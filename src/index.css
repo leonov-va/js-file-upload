@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  background-color: #666;
+  font-family: "Roboto";
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+}
