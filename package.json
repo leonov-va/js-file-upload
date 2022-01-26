@@ -1,0 +1,26 @@
+{
+  "name": "js-file-upload-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonov-va/js-file-upload-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonov-va/js-file-upload-example/issues"
+  },
+  "homepage": "https://github.com/leonov-va/js-file-upload-example#readme",
+  "devDependencies": {
+    "parcel": "^2.2.1"
+  }
+}
