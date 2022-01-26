@@ -4,4 +4,7 @@ import "./libs/file-upload/index.css";
 fileUpload("#file", {
   multi: true,
   accept: [".png", ".jpg", ".jpeg", ".gif"],
+  onUpload(files) {
+    console.log("files: ", files);
+  },
 });

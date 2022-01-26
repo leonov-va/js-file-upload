@@ -114,6 +114,16 @@ body {
   transition: transform 300ms;
 }
 
+.fu-preview__progress {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #42b983;
+  text-align: center;
+  transition: width 300ms;
+}
+
 .fu-preview__name {
   overflow: hidden;
   max-width: 90%;

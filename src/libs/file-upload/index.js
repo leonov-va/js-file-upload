@@ -1,6 +1,8 @@
 export function fileUpload(selector, options = {}) {
   let files = [];
 
+  const onUpload = options.onUpload ?? noop;
+
   const input = document.querySelector(selector);
   input.hidden = true;
 
@@ -86,13 +88,31 @@ export function fileUpload(selector, options = {}) {
     block.addEventListener("transitionend", removing);
   };
 
-  const uploadHandler = () => {};
+  const clearPreviewInfo = (el) => {
+    el.style.transform = "translateY(0)";
+    el.innerHTML = `<div class="fu-preview__progress"></div>`;
+  };
+
+  const uploadHandler = () => {
+    previews
+      .querySelectorAll(".fu-preview__remove")
+      .forEach((el) => el.remove());
+
+    const previewInfo = previews.querySelectorAll(".fu-preview__info");
+    previewInfo.forEach(clearPreviewInfo);
+
+    onUpload(files);
+  };
 
   openButton.addEventListener("click", triggerInput);
   input.addEventListener("change", changeHandler);
   previews.addEventListener("click", removeHandler);
   uploadButton.addEventListener("click", uploadHandler);
 }
+
+// ########################################################
+
+function noop() {}
 
 function bytesToSize(bytes) {
   const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
