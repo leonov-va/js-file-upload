@@ -21,5 +21,8 @@
   "homepage": "https://github.com/leonov-va/js-file-upload-example#readme",
   "devDependencies": {
     "parcel": "^2.2.1"
+  },
+  "dependencies": {
+    "firebase": "^9.6.4"
   }
 }

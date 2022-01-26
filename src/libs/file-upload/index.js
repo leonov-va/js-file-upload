@@ -101,7 +101,7 @@ export function fileUpload(selector, options = {}) {
     const previewInfo = previews.querySelectorAll(".fu-preview__info");
     previewInfo.forEach(clearPreviewInfo);
 
-    onUpload(files);
+    onUpload(files, previewInfo);
   };
 
   openButton.addEventListener("click", triggerInput);
